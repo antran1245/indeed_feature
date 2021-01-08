@@ -5,6 +5,7 @@ import CollaspeFeature from './collapseComponent';
 import merry from '../image/merry.jpg';
 
 function Entry(props) {
+    
     function Application () {
         if (props.post.NumberOfApp >= 100) {
             return (<h6>100+ applicants</h6>);
@@ -27,7 +28,7 @@ function Entry(props) {
                 </Col>
                 <Col xs={10} sm={2} className="align-self-center">
                     <Button variant="primary" block>Status</Button>
-                    <div>
+                    <div style={{display: props.modal}} className="mt-1">
                         <ModalFeature title={props.post.Title} body={props.post.Body}/>
                     </div>
                 </Col>
@@ -35,7 +36,7 @@ function Entry(props) {
                     <i className="fa fa-ellipsis-v"></i>
                 </Col>
             </Row>
-            <div>
+            <div style={{display: props.collapse}}>
                 <Row className="mb-sm-2">
                     <Col xs={10} sm={{span:10, offset:2}}>
                         <CollaspeFeature body={props.post.Body} />

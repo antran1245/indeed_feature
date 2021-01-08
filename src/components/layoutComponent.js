@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav} from 'react-bootstrap';
 import Entry from './entryComponent';
+import Feature from './featureComponent';
 import {posting} from '../database/data';
 
 class Layout extends Component {
@@ -9,9 +10,12 @@ class Layout extends Component {
         this.state = {
             savedTab: "",
             appliedTab: "blue",
-            display: "block"
+            display: "block",
+            featureModal: 'none',
+            featureCollapse: 'none',
         };
         this.tab = this.tab.bind(this);
+        this.feature = this.feature.bind(this);
     }
 
     tab() {
@@ -20,6 +24,21 @@ class Layout extends Component {
             appliedTab: (this.state.appliedTab === "" ? 'blue' : ''),
             display: (this.state.appliedTab === "blue" ? 'none' : 'block')});
     }    
+
+    feature(event) {
+        if(event.target.name === "modal") {
+            this.setState({
+                featureModal: (this.state.featureModal === "block" ? "none" : 'block'),
+                featureCollapse: "none"
+            });
+        } else {
+            this.setState({
+                featureModal: "none",
+                featureCollapse: (this.state.featureCollapse === "block" ? "none" : 'block')
+            });
+        }
+        console.log(this.state.featureCollapse);
+    }
 
     render() {
         return(
@@ -45,6 +64,11 @@ class Layout extends Component {
                     </Container>
                 </Navbar>
                 <Container>
+                    <Row>
+                        <Col>
+                            <Feature handle={this.feature}/>
+                        </Col>
+                    </Row>
                     <div className="betaBox">
                         <Row noGutters className="align-items-center">
                             <Col xs={1} sm={1}><i className="fa fa-exclamation fa-2x"></i></Col>
@@ -68,7 +92,7 @@ class Layout extends Component {
                         <Col><div className="tabBar"></div></Col>
                     </Row>
                     <div style={{display:this.state.display}}>
-                        {posting.map((post) =><Entry post={post}/>)}
+                        {posting.map((post) =><Entry post={post} modal={this.state.featureModal} collapse={this.state.featureCollapse}/>)}
                     </div>
                 </Container>
             </div>
