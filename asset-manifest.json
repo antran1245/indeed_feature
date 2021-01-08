@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/indeed_feature/static/css/main.05932c5d.chunk.css",
+    "main.js": "/indeed_feature/static/js/main.e51f0c5c.chunk.js",
+    "main.js.map": "/indeed_feature/static/js/main.e51f0c5c.chunk.js.map",
+    "runtime-main.js": "/indeed_feature/static/js/runtime-main.65507d5d.js",
+    "runtime-main.js.map": "/indeed_feature/static/js/runtime-main.65507d5d.js.map",
+    "static/css/2.f17e0286.chunk.css": "/indeed_feature/static/css/2.f17e0286.chunk.css",
+    "static/js/2.05f54023.chunk.js": "/indeed_feature/static/js/2.05f54023.chunk.js",
+    "static/js/2.05f54023.chunk.js.map": "/indeed_feature/static/js/2.05f54023.chunk.js.map",
+    "static/js/3.b859dc39.chunk.js": "/indeed_feature/static/js/3.b859dc39.chunk.js",
+    "static/js/3.b859dc39.chunk.js.map": "/indeed_feature/static/js/3.b859dc39.chunk.js.map",
+    "index.html": "/indeed_feature/index.html",
+    "static/css/2.f17e0286.chunk.css.map": "/indeed_feature/static/css/2.f17e0286.chunk.css.map",
+    "static/css/main.05932c5d.chunk.css.map": "/indeed_feature/static/css/main.05932c5d.chunk.css.map",
+    "static/js/2.05f54023.chunk.js.LICENSE.txt": "/indeed_feature/static/js/2.05f54023.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.css": "/indeed_feature/static/media/fontawesome-webfont.f691f37e.woff",
+    "static/media/App.css": "/indeed_feature/static/media/indeed_feature1.84e6f306.jpg",
+    "static/media/merry.74f2c56b.jpg": "/indeed_feature/static/media/merry.74f2c56b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.65507d5d.js",
+    "static/css/2.f17e0286.chunk.css",
+    "static/js/2.05f54023.chunk.js",
+    "static/css/main.05932c5d.chunk.css",
+    "static/js/main.e51f0c5c.chunk.js"
+  ]
+}
