@@ -1,6 +1,7 @@
 import React from 'react';
 import {Row, Col, Button, Image} from 'react-bootstrap';
-import Feature from './featureComponent';
+import ModalFeature from './modalComponent';
+import CollaspeFeature from './collapseComponent';
 import merry from '../image/merry.jpg';
 
 function Entry(props) {
@@ -26,14 +27,25 @@ function Entry(props) {
                 </Col>
                 <Col xs={10} sm={2} className="align-self-center">
                     <Button variant="primary" block>Status</Button>
-                    <Feature title={props.post.Title} body={props.post.Body}/>
+                    <div>
+                        <ModalFeature title={props.post.Title} body={props.post.Body}/>
+                    </div>
                 </Col>
                 <Col xs={2} sm={1} className="align-self-center">
                     <i className="fa fa-ellipsis-v"></i>
                 </Col>
             </Row>
+            <div>
+                <Row className="mb-sm-2">
+                    <Col xs={10} sm={{span:10, offset:2}}>
+                        <CollaspeFeature body={props.post.Body} />
+                    </Col>
+                </Row>
+            </div>
             <Row>
-                <div style={{width:"100%", height:"3px", backgroundColor:"gray"}}></div>
+                <Col>
+                    <div style={{width:"100%", height:"3px", backgroundColor:"gray"}}></div>
+                </Col>
             </Row>
         </div>
     );
