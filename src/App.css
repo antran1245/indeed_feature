@@ -2,37 +2,29 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.screen1 {
+  background-image: url(./image/indeed_feature.jpg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.screen2 {
+  background-image: url(./image/indeed_feature1.jpg);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.betaBox {
+  background-color: rgb(130, 130, 255);
+  padding: 1% 20% 1% 20%;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+.tabBar {
+  height: 7px;
+  background-color: rgb(192, 185, 185);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media(max-width: 575.98px) {
+  .betaBox{
+    padding: 3% 3% 1% 3%;
+    margin: 2% 0 0 0;
   }
 }

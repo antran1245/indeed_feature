@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import {useState} from 'react';
+import Layout from './components/layoutComponent';
+import { Modal } from 'react-bootstrap';
 import './App.css';
 
 function App() {
+  const [screenOne, showOne] = useState(true);
+  const [screenTwo, showTwo] = useState(false);
+  const handleScreenOne = () => {
+    showOne(false);
+    showTwo(true);
+  }
+  const handleScreenTwo = () => showTwo(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Modal className="screen1" show={screenOne} onHide={handleScreenOne}></Modal>
+      <Modal className="screen2" show={screenTwo} onHide={handleScreenTwo}></Modal>
+      <Layout/>
     </div>
   );
 }
